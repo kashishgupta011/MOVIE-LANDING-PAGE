@@ -1,0 +1,286 @@
+html {
+    scroll-behavior: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: white;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 60px;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.search-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 60px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.9),
+            rgba(0,0,0,0.4),
+            rgba(0,0,0,0.1)
+        ),
+        url("images/bg-65.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.small-title {
+    font-size: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.watch-btn {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.more-btn {
+    padding: 14px 30px;
+    border: 1px solid white;
+    border-radius: 30px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.movies {
+    padding: 40px 60px;
+    background: #000;
+}
+
+.movies h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.movie-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y:hidden;
+    scrollbar-width: none;
+}
+
+.movie-list::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-card {
+    min-width: 220px;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+}
+
+.slider-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.slider-buttons button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.slider-buttons button:hover {
+    background: #ccc;
+}
+.movie-card h3 {
+    margin-top: 10px;
+    padding-left: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 100px 20px 50px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .movies {
+        padding: 30px 20px;
+    }
+
+    .movie-card {
+        min-width: 180px;
+        height: 300px;
+    }
+
+    .movie-card img {
+        height: 260px;
+    }
+
+    .slider-buttons {
+        margin-bottom: 10px;
+    }
+}
+.hero-content {
+    animation: heroContent 0.6s ease;
+}
+
+@keyframes heroContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.movie-card.active {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-box input {
+    width: 180px;
+    padding: 10px 15px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: #ccc;
+}
+
+.search-btn {
+    cursor: pointer;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
